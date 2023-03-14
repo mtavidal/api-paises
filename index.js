@@ -106,7 +106,7 @@ btnMore.onclick = () => {
 
 
 const buscar = document.getElementById("search")
-buscar.addEventListener("keyup", ({key}) => {
+buscar.addEventListener("keydown", ({key}) => {
     if (key === "Enter") {
         let divPais = document.getElementById("containerPaises");
         divPais.innerHTML="";
