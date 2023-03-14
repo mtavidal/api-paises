@@ -36,7 +36,6 @@ function preencherCardsPaises(data){
         </div>    
         ` 
     });
-
     const cardMore = document.getElementsByClassName("classCard");
     for (let index = 0; index < cardMore.length; index++) {
         cardMore[index].onclick = () => {
@@ -54,8 +53,8 @@ function preencherCardsPaises(data){
                 })
                 return arrayValue; 
               }
-              let moeda = convertObjectToArray(data[index].currencies);
-              let idiomas = convertObjectToArray(data[index].languages);
+              let moeda = convertObjectToArray(arrayPaises[index].currencies);
+              let idiomas = convertObjectToArray(arrayPaises[index].languages);
               let lingua = ""; 
               for (let index = 0; index < idiomas.length; index++) {
                 lingua += idiomas[index].value + ", ";
@@ -63,14 +62,14 @@ function preencherCardsPaises(data){
               lingua = lingua.substring(0, lingua.length - 2) + ".";
             cardModal.innerHTML = `
             <div class="modal-header">
-                <h1> More About <u>${data[index].name.common}</u></h1>
+                <h1> More About <u>${arrayPaises[index].name.common}</u></h1>
             </div>
 
             <div class="modal-body">
-                <p><b>Subregion:</b> ${data[index].subregion === undefined ? " - " : data[index].subregion}</p>
-                <p><b>Borders:</b> ${data[index].borders === undefined ? " - " : data[index].borders}</p>
-                <p><b>Main Currency:</b> ${data[index].currencies === undefined ? " - " : moeda[0].value.name + " (" + moeda[0].key + ") | symbol: " + moeda[0].value.symbol +""}</p>
-                <p><b>Languages:</b> ${data[index].languages === undefined ? " - " : lingua}</p>
+                <p><b>Subregion:</b> ${arrayPaises[index].subregion === undefined ? " - " : arrayPaises[index].subregion}</p>
+                <p><b>Borders:</b> ${arrayPaises[index].borders === undefined ? " - " : arrayPaises[index].borders}</p>
+                <p><b>Main Currency:</b> ${arrayPaises[index].currencies === undefined ? " - " : moeda[0].value.name + " (" + moeda[0].key + ") | symbol: " + moeda[0].value.symbol +""}</p>
+                <p><b>Languages:</b> ${arrayPaises[index].languages === undefined ? " - " : lingua}</p>
             </div>
 
             <div class="modal-footer">
@@ -126,8 +125,9 @@ buscar.addEventListener("submit", (event) => {
             return response.json();
         })
         .then(data => {
-            arrayPaises = 0;
+            arrayPaises = data;
             preencherCardsPaises(data);
+            window.scrollTo(0, 400);
         })
         .catch(error => {
             console.error("Erro: " + error);

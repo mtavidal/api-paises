@@ -218,15 +218,17 @@ header img {
    
     
     .modal-content {
-        width: 300px;
+        width: 285px;
     }
     .modal-header h1{
-        font-size: 40px;
+        font-size: 35px;
     }
     
     .modal-body{
         font-size: 22px;
         line-height: 35px;
+        padding-right: 5px;
+        word-wrap: break-word;
     }
     .btnFechaModal{
         font-size: 30px;
