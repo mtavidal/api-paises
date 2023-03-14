@@ -31,7 +31,7 @@ function preencherCardsPaises(data){
                 <h2><b>Population:</b> ${pais.population}</h2>
                 <h2><b>Region:</b> ${pais.region}</h2>
                 <h2><b>Capital:</b> ${pais.capital}</h2>
-                <div id="divImagem"><img id="dedo" src="/imagens/tap-svgrepo-com.png"></div>
+                <div id="divImagem"><img id="dedo" src="./imagens/tap-svgrepo-com.png"></div>
             </div>
         </div>    
         ` 
