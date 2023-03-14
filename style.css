@@ -1,0 +1,223 @@
+* {
+    margin: 0px;
+}
+
+body {
+    background-color:#A6BB8D;
+}
+
+header{
+    background-color: #3C6255;
+    color:#EAE7B1;
+    padding: 30px;
+    font-family: 'Amatic SC', cursive;
+    font-size: 40px;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    line-height: 85px;
+    
+}
+
+header img {
+    width: 120px;
+    height: 120px;
+    padding-right: 5px;
+    align-self: center;
+}
+
+#secaoInputs{
+    background-color:#61876E;
+    padding: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#search, #regioes {
+    font-size: 30px;
+    padding: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right: 20px;
+    margin-left: 20px;
+    font-weight: 700;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    border-radius: 10px;
+    border: none;
+    color: #3C6255;
+    width: 400px;
+}
+
+#containerPaises{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 30px;
+}
+
+#cardPaises{
+    width: 270px;
+    margin: 20px;
+    background-color: #EAE7B1;
+    padding: 20px;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+#divImagem{
+    display: flex;
+    justify-content: flex-end
+}
+
+#dedo {
+    width: 60px;
+    position: relative;
+    left: 35px;
+    top: 40px;
+}
+
+#cardPaises:hover{
+    box-shadow: 5px 5px 5px 5px rgb(97, 135, 110, 0.4);
+    cursor: pointer;
+}
+
+
+#cardPaises h1 {
+    font-size: 40px;
+    padding-top: 15px;
+    font-weight: 700;
+}
+
+#cardPaises h2 {
+    font-size: 30px;
+    padding-top: 10px;
+    font-weight: 400;
+}
+
+#divBotao{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#btnNext{
+    font-size: 40px;
+    padding: 15px;
+    width: 30%;
+    margin-top: 10px;
+    margin-bottom: 40px;
+    font-family: 'Amatic SC', cursive;
+    font-weight: bold;
+    border-radius: 10px;
+    border: none;
+    color: #3C6255;
+}
+#btnNext:hover{
+    background-color:#61876E;
+    cursor: pointer;
+}
+
+/*modal*/
+
+.modal {
+    background-color: rgba(0, 0, 0, .8);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: none;
+    
+}
+
+.modal-content {
+    margin: 0 auto;
+    margin-top: 10%;
+    width: 50%;
+    background-color: #A6BB8D;
+    padding: 0;
+    box-shadow: 0 0 2px #fff;
+}
+#cardModal{
+    border: 3px solid #3C6255;
+    margin-bottom: 20px;
+}
+
+.modal-header h1{
+    text-align: center;
+    font-family: 'Amatic SC', cursive;
+    font-size: 50px;
+    font-weight: 700;
+    
+}
+
+.modal-body{
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-size: 30px;
+    line-height: 55px;
+    padding: 20px;
+}
+
+.modal-header{
+    background-color: #61876E;
+    padding: 20px;
+}
+
+.modal-footer{
+    background-color: #61876E;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btnFechaModal{
+    font-size: 40px;
+    padding: 10px;
+    margin-top: 30px;
+    margin-bottom:30px;
+    font-family: 'Amatic SC', cursive;
+    font-weight: bold;
+    border-radius: 10px;
+    border: none;
+    color: #3C6255;
+}
+
+.btnFechaModal:hover{
+    background-color:#93bba2;
+    cursor: pointer;
+}
+
+@media only screen and (max-width:480px){
+    header{
+        padding: 30px;
+        font-size: 30px;
+        line-height: 60px;
+    }
+    
+    .modal-content {
+        width: 300px;
+    }
+    .modal-header h1{
+        font-size: 40px;
+    }
+    
+    .modal-body{
+        font-size: 22px;
+        line-height: 35px;
+    }
+    .btnFechaModal{
+        font-size: 30px;
+        padding: 10px;
+        margin-top: 10px;
+        margin-bottom:10px;
+    }
+    #btnNext{
+        font-size: 40px;
+        width: 80%;
+       
+    }
+}
