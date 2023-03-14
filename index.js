@@ -105,36 +105,37 @@ btnMore.onclick = () => {
 }
 
 
-const buscar = document.getElementById("search")
-buscar.addEventListener("keydown", ({key}) => {
-    if (key === "Enter") {
-        let divPais = document.getElementById("containerPaises");
-        divPais.innerHTML="";
-        const btnMore = document.getElementById("btnNext");
-        btnMore.style.display="none";
-        let translation = buscar.value;
-        let endpoint = `https://restcountries.com/v3.1/translation/${translation}`
-        fetch(endpoint)
-            .then(response => {
-                if (!response.ok) {
-                    let err = new Error("HTTP status code: " + response.status);
-                    err.response = response;
-                    err.status = response.status;
-                    throw err;
-                }
-                return response.json();
-            })
-            .then(data => {
-                arrayPaises = 0;
-                preencherCardsPaises(data);
-            })
-            .catch(error => {
-                console.error("Erro: " + error);
-                if (error.status === 404) {
-                    alert ("País não encontrado, digite corretamente.")
-                }
-            })
-    }
+const buscar = document.getElementById("idForm")
+const paisBuscado = document.getElementById("search")
+buscar.addEventListener("submit", (event) => {
+    event.preventDefault();
+    let divPais = document.getElementById("containerPaises");
+    divPais.innerHTML="";
+    const btnMore = document.getElementById("btnNext");
+    btnMore.style.display="none";
+    let translation = paisBuscado.value;
+    let endpoint = `https://restcountries.com/v3.1/translation/${translation}`
+    fetch(endpoint)
+        .then(response => {
+            if (!response.ok) {
+                let err = new Error("HTTP status code: " + response.status);
+                err.response = response;
+                err.status = response.status;
+                throw err;
+            }
+            return response.json();
+        })
+        .then(data => {
+            arrayPaises = 0;
+            preencherCardsPaises(data);
+        })
+        .catch(error => {
+            console.error("Erro: " + error);
+            if (error.status === 404) {
+                alert ("País não encontrado, digite corretamente. Em português, colocar acentos")
+            }
+        })
+
 })
 
 
