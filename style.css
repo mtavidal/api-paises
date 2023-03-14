@@ -30,25 +30,43 @@ header img {
 
 #secaoInputs{
     background-color:#61876E;
-    padding: 30px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 0px;
+    padding-right: 0px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    justify-content: space-evenly;
 }
 
-#search, #regioes {
+
+#search {
     font-size: 30px;
     padding: 20px;
     margin-top: 10px;
     margin-bottom: 10px;
-    margin-right: 20px;
-    margin-left: 20px;
     font-weight: 700;
     font-family: 'Yanone Kaffeesatz', sans-serif;
     border-radius: 10px;
     border: none;
     color: #3C6255;
-    width: 400px;
+    width: 270px;
+   
+}
+
+#regioes {
+    font-size: 30px;
+    padding: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-weight: 700;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    border-radius: 10px;
+    border: none;
+    color: #3C6255;
+    width: 310px;
+   
 }
 
 #containerPaises{
@@ -193,10 +211,11 @@ header img {
 
 @media only screen and (max-width:480px){
     header{
-        padding: 30px;
+        padding: 15px;
         font-size: 30px;
         line-height: 60px;
     }
+   
     
     .modal-content {
         width: 300px;
