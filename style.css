@@ -209,6 +209,39 @@ header img {
     cursor: pointer;
 }
 
+@media only screen and (max-width:930px){
+
+    .modal-content {
+        width: 545px;
+    }
+    .modal-header{
+        padding: 10px;
+    }
+    .modal-header h1{
+        font-size: 40px;
+    }
+    .modal-content {
+        margin-top: 2%;
+    }
+    
+    .modal-body{
+        font-size: 22px;
+        line-height: 30px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+
+    .btnFechaModal{
+        font-size: 30px;
+        padding: 5px;
+        padding-left: 10px;
+        padding-right: 10px;
+        margin-top: 10px;
+        margin-bottom:10px;
+    }
+}
+
+
 @media only screen and (max-width:480px){
     header{
         padding: 15px;
