@@ -1,6 +1,6 @@
 # Projeto PAÍSES - Javascript - API
 
-Repositório de um site com informações sobre países, utilizando uma API de piadas (https://restcountries.com/), em inglês.
+Repositório de um site com informações sobre países, utilizando uma API (https://restcountries.com/), em inglês.
 
 link: https://mtavidal.github.io/api-paises/
 
